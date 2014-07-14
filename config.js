@@ -10,6 +10,6 @@ config.mongo = [
         port: 27017
     }
 
-]
+];
 
 module.exports = config;
