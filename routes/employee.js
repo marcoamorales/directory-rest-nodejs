@@ -1,8 +1,9 @@
+var config = require('./config'),
 var MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server,
     db;
 
-var mongoClient = new MongoClient(new Server('localhost', 27017));
+var mongoClient = new MongoClient(new Server(config.mongo.host, config.mongo.port));
 mongoClient.open(function(err, mongoClient) {
     db = mongoClient.db("employeedb09");
     db.collection('employees', {strict:true}, function(err, collection) {
