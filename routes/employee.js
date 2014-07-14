@@ -1,4 +1,4 @@
-var config = require('./config'),
+var config = require('./config');
 var MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server,
     db;
