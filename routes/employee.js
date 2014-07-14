@@ -1,6 +1,6 @@
 var MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server,
-    config = require('../config');
+    config = require('../config'),
     db;
 
 console.log("Host: " + config.mongo.host);
