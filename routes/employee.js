@@ -1,7 +1,10 @@
-var config = require('./config');
 var MongoClient = require('mongodb').MongoClient,
     Server = require('mongodb').Server,
+    config = require('../config');
     db;
+
+console.log("Host: " + config.mongo.host);
+console.log("Port: " + config.mongo.port);
 
 var mongoClient = new MongoClient(new Server(config.mongo.host, config.mongo.port));
 mongoClient.open(function(err, mongoClient) {
