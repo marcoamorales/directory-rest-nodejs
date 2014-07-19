@@ -3,10 +3,10 @@ var MongoClient = require('mongodb').MongoClient,
     config = require('../config'),
     db;
 
-console.log("Host: " + config.mongo.host);
-console.log("Port: " + config.mongo.port);
+console.log("Host: " + config.mongo_host);
+console.log("Port: " + config.mongo_port);
 
-var mongoClient = new MongoClient(new Server(config.mongo.host, config.mongo.port));
+var mongoClient = new MongoClient(new Server(config.mongo_host, config.mongo_port));
 mongoClient.open(function(err, mongoClient) {
     db = mongoClient.db("employeedb09");
     db.collection('employees', {strict:true}, function(err, collection) {

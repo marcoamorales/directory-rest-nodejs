@@ -1,13 +1,9 @@
 var config = {};
 
-config.node = {
-    port: 8080
+config = {
+    port: 8080,
+    mongo_host: "localhost",
+    mongo_port: 27017,
 };
-
-config.mongo =
-    {
-        host: "localhost",
-        port: 27017
-    };
 
 module.exports = config;
