@@ -7,6 +7,9 @@ var app = express();
 app.get('/employees/:id/reports', wines.findByManager);
 app.get('/employees/:id', wines.findById);
 app.get('/employees', wines.findAll);
+app.get('/', function(req, res){
+    res.send('test app!');
+});
 
 console.log("Port server: " + config.port);
 app.listen(config.port);
