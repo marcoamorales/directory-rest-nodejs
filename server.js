@@ -8,7 +8,7 @@ app.get('/employees/:id/reports', wines.findByManager);
 app.get('/employees/:id', wines.findById);
 app.get('/employees', wines.findAll);
 app.get('/', function(req, res){
-    res.send('test app!\n moaaar test\n next test');
+    res.send('This is a test page');
 });
 
 console.log("Port server: " + config.port);
